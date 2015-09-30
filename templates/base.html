@@ -38,6 +38,31 @@
 				transform: translateX(-50%);
 			}
 
+			/* Shoutbox profile images */
+			.user_icon_chat
+			{
+				width: 40px;
+				height: 40px;
+				overflow: hidden;
+				position: relative;
+				margin-right: 0.5em;
+			}
+
+			.user_icon_chat img
+			{
+				width: auto;
+				height: 40px;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+
+			.chat_message h5 span
+			{
+				float:right;
+			}
+
 			/* Top menu bar with icons */
 			.navbar-narrow .navbar-nav > li > a, .navbar-narrow .navbar-brand
 			{
@@ -181,20 +206,7 @@
 			<div class="row"> <!-- This is the grid system - it makes sure everything adapts to small windows, like phones -->
 				<div class="col-xs-12 col-md-8">
 					<!-- Content will go here (this is random from http://loripsum.net/api/12/medium/headers/link/ul/ol/bq/code/ ) -->
-					<div id="wrapper">
-  							  <div id="menu">
-								  <p class="welcome">Welcome, <b></b></p>
-								  <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
-								  <div style="clear:both"></div>
-    					</div>
 
-    					<div id="chatbox"></div>
-
-    					<form name="message" action="">
-       					<input name="usermsg" type="text" id="usermsg" size="63" />
-        				<input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
-    					</form>
-					</div>
 					<!-- Default menu -->
 					<p>test</p>
 				</div>
@@ -260,26 +272,195 @@
 							</ul>
 						</div>
 					</div>
+
+					<!--Shoutbox-->
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">Borrelsaldo</h3>
+							<h3 class="panel-title">Shoutbox</h3>
 						</div>
 						<div class="panel-body">
-							<form class="form-inline">
-								<p>Je borrelsaldo is momenteel &euro; <strong class="text-warning">-4.70</strong>. Hoog het snel met iDeal op, of kom langs bij de <a href="/contact/">kasdienst</a>!</p>
-								<div class="form-group">
-									<div class="input-group">
-										<div class="input-group-addon">&euro;</div>
-										<input style="max-width: 8em;" type="text" class="form-control" placeholder="Amount">
-										<div class="input-group-addon">.00</div>
+							<ul class="media-list">
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+											</a>
+										</div>
 									</div>
-								</div>
-								<button type="submit" class="btn btn-success">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-								</button>
-							</form>
+									<div class="media-body">
+										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+								<li class="media chat_message">
+									<div class="media-left">
+										<div class="user_icon_chat">
+											<a href="#"> <!-- Class user_icon is defined above -->
+												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+											</a>
+										</div>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
+
+
+
+
+					<!--<div class="panel panel-default">-->
+						<!--<div class="panel-heading">-->
+							<!--<h3 class="panel-title">Leochat</h3>-->
+						<!--</div>-->
+
+    					<!--<div id="chatbox"></div>-->
+    						<!--<form name="message" action="">-->
+       							<!--<input name="usermsg" type="text" id="usermsg" size="63" />-->
+        						<!--<input name="submitmsg" type="submit"  id="submitmsg" value="de WWWcie is geweldig" />-->
+    						<!--</form>-->
+						<!--</div>-->
+
+						<!--<div class="panel-body">-->
+							<!--<form class="form-inline">-->
+
+							<!--</form>-->
+						<!--</div>-->
+					<!--</div>-->
 				</div>
 			</div>
 		</div>
