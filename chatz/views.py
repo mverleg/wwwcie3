@@ -3,23 +3,12 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.utils.timezone import now
+from chatz.models import ChatMessage, ChatTopic
 
 
 def show_chat(request):
-	messages = [
-		{
-			'who': 'Henk',
-			'when': now() - timedelta(seconds = 3),
-			'text': 'Onze chatz is supercool!',
-			'topic': 'wis1',
-		},
-		{
-			'who': 'Henk',
-			'when': now(),
-			'text': 'Niewaar!',
-			'topic': 'wis1',
-		}
-	]
+	topic = ChatTopic.objects.get(name='wiskunde1')
+	messages = ChatMessage.objects.filter(topic=topic)
 	return render(request, 'show_chat.html', {
 		'messages': messages,
 	})
