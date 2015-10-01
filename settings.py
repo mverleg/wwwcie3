@@ -8,9 +8,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
+from os.path import dirname, join
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = dirname(__file__)
 
 
 AUTH_USER_MODEL = 'auth.User'
@@ -53,6 +55,9 @@ TEMPLATES = [
 	{
 		'BACKEND': 'django.template.backends.django.DjangoTemplates',
 		'APP_DIRS': True,
+		'DIRS': (
+			join(BASE_DIR, 'templates'),
+		),
 		'OPTIONS': {
 			'context_processors': (
 				'django.contrib.auth.context_processors.auth',
@@ -73,14 +78,13 @@ ROOT_URLCONF = 'urls'
 
 WSGI_APPLICATION = 'wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+		'NAME': join(BASE_DIR, 'db.sqlite3'),
 	}
 }
 
