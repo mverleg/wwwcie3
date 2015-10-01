@@ -1,12 +1,27 @@
 
 
-<p>{{ messages }}</p>
+<h1></h1>
 
 {% for msg in messages %}
     <p>
-    {{ msg.user }}
-    <span title="{{msg.time}}" >{{ msg.time|timesince }}
-    </span>
-    {{ msg.text }}
+	    <a href="{{ msg.user.get_absolute_url }}" rel="author">{{ msg.user }}</a>
+	    <span title="{{msg.time}}" >{{ msg.time|timesince }}</span>
     </p>
+	<p>{{ msg.text }}</p>
+
+{% empty %}
+	<p>No messages yet!</p>
 {% endfor %}
+
+{% if request.user.is_authenticated %}
+	<form method="POST" action="{% url 'chat_post' %}">
+		<input type="text" name="message" placeholder="Your message..." />
+		<input type="hidden" name="topic" value="{{ topic.name }}" />
+		{% csrf_token %}
+		<input type="submit" value="send" />
+	</form>
+{% else %}
+	<p>Login to post a message.</p>
+{% endif %}
+
+
