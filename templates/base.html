@@ -209,10 +209,12 @@
 		<div class="container">
 			<div class="row"> <!-- This is the grid system - it makes sure everything adapts to small windows, like phones -->
 				<div class="col-xs-12 col-md-8">
-					<!-- Content will go here (this is random from http://loripsum.net/api/12/medium/headers/link/ul/ol/bq/code/ ) -->
+					{% block content %}
+						<!-- Content will go here (this is random from http://loripsum.net/api/12/medium/headers/link/ul/ol/bq/code/ ) -->
 
-					<!-- Default menu -->
-					<p>test</p>
+						<!-- Default menu -->
+						<p>test</p>
+					{% endblock content %}
 				</div>
 
 				<div class="col-xs-12 col-md-4">
@@ -280,172 +282,173 @@
 					{% display_chat 'wiskunde1' %}
 
 					<!--Shoutbox-->
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">Shoutbox</h3>
+					{% block chat_widget %}
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Shoutbox</h3>
+							</div>
+							<div class="panel-body">
+								<ul class="media-list">
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Mark V <span>gisteren</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+									<li class="media chat_message">
+										<div class="media-left">
+											<div class="user_icon_chat">
+												<a href="#"> <!-- Class user_icon is defined above -->
+													<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
+												</a>
+											</div>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
+											<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<div class="panel-body">
-							<ul class="media-list">
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://www.soompi.com/es/wp-content/blogs.dir/8/files/2014/01/Psy2.jpg" alt="Gangnam!">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Mark V <span>gisteren</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-								<li class="media chat_message">
-									<div class="media-left">
-										<div class="user_icon_chat">
-											<a href="#"> <!-- Class user_icon is defined above -->
-												<img class="media-object" src="http://assets.audiomack.com/roshoun/368f10d3bc23b82ed1b1a233ce0a977e.png" alt="Saiyan">
-											</a>
-										</div>
-									</div>
-									<div class="media-body">
-										<h5 class="media-heading">Peter C <span>2 dagen geleden</span></h5>
-										<h6 class="media-heading">Hey wadup, Mark V in da house! test</h6>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-
+					{% endblock chat_widget %}
 
 
 

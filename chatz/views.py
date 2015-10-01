@@ -1,6 +1,7 @@
 
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.template import RequestContext
 from django.template.loader import render_to_string
 from django.views.decorators.http import require_POST
@@ -9,7 +10,7 @@ from chatz.models import ChatMessage, ChatTopic
 
 def generate_chat_html(request, topic):
 	messages = ChatMessage.objects.filter(topic = topic)
-	return render_to_string('show_chat.html', RequestContext(request, {
+	return render_to_string('render_chat.html', RequestContext(request, {
 		'messages': messages,
 		'topic': topic,
 	}))
@@ -20,8 +21,9 @@ def chat_show(request, topic_name = 'wiskunde1'):
 		topic = ChatTopic.objects.get(name = topic_name)
 	except ChatTopic.DoesNotExist:
 		return HttpResponse('We do not have a discussion about "{0:s}" yet. {1:s}'.format(topic_name, 'You can create it in the admin panel.' if request.user.is_staff else ''))
-	html = generate_chat_html(request, topic)
-	return HttpResponse(html)
+	return render(request, 'show_chat.html', {
+		'topic': topic,
+	})
 
 
 @login_required

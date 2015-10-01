@@ -8,14 +8,15 @@ register = template.Library()
 
 
 @register.simple_tag(takes_context = True)
-def display_chat(context, topic_name):
+def display_chat(context, topic):
 	request = context.get('request', None)
 	if not request:
 		return 'Need RequestContext to display chat.'
-	try:
-		topic = ChatTopic.objects.get(name = topic_name)
-	except ChatTopic.DoesNotExist:
-		return 'We do not have a discussion about "{0:s}" yet.'.format(topic_name)
+	if not isinstance(topic, ChatTopic):
+		try:
+			topic = ChatTopic.objects.get(name = topic)
+		except ChatTopic.DoesNotExist:
+			return 'We do not have a discussion about "{0:s}" yet.'.format(topic)
 	return generate_chat_html(request, topic)
 
 

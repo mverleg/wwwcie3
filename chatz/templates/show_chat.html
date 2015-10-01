@@ -1,27 +1,16 @@
 
+{% extends 'base.html' %}
 
-<h1></h1>
+{% load chat_tags %}
 
-{% for msg in messages %}
-    <p>
-	    <a href="{{ msg.user.get_absolute_url }}" rel="author">{{ msg.user }}</a>
-	    <span title="{{msg.time}}" >{{ msg.time|timesince }}</span>
-    </p>
-	<p>{{ msg.text }}</p>
 
-{% empty %}
-	<p>No messages yet!</p>
-{% endfor %}
+{% block content %}
+	<h1>Chat about {{ topic }}</h1>
+	{% display_chat topic %}
+{% endblock content %}
 
-{% if request.user.is_authenticated %}
-	<form method="POST" action="{% url 'chat_post' %}">
-		<input type="text" name="message" placeholder="Your message..." />
-		<input type="hidden" name="topic" value="{{ topic.name }}" />
-		{% csrf_token %}
-		<input type="submit" value="send" />
-	</form>
-{% else %}
-	<p>Login to post a message.</p>
-{% endif %}
+{% block chat_widget %}
+	<!-- chat widget hidden on chat page -->
+{% endblock chat_widget %}
 
 
