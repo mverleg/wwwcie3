@@ -9,20 +9,20 @@
 		<meta charset="utf-8" />
 
 		<title>svLeonardo</title>
-		<link rel="shortcut icon" type="image/png" href="icon_here.png"/>
+		<link rel="shortcut icon" type="image/png" href="{% static 'img/icon.png' %}"/>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<!-- CSS Style files; leave this until endif -->
-		<link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
-{#		<link rel="stylesheet" href="https://bootswatch.com/journal/bootstrap.min.css">#}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-		<link rel="stylesheet" href="{% static 'base.css' %}">
+		<link rel="stylesheet" href="{% static 'style/base.css' %}">
 	</head>
 	<body>
 		<!--
@@ -36,14 +36,19 @@
 
 		<!-- Default menu -->
 		<div class="container"> <!-- if you remove this, the menu will be wider -->
-			<div id="header-menu-top" class="navbar-narrow hidden-xs hidden-sm">
-				<nav class="navbar navbar-default">
-					<ol class="nav navbar-nav navbar-left">
-						<li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
-						<li><a href="#">Library</a></li>
-						<li class="active"><a href="#">Data</a></li>
-						<!-- #todo https://css-tricks.com/triangle-breadcrumbs/ -->
-					</ol>
+			<nav id="header-menu-top" class="navbar navbar-default hidden-xs hidden-sm">
+				<!-- #todo: http://www.w3schools.com/bootstrap/bootstrap_affix.asp -->
+				<div class="container-fluid">
+					<!-- Breadcrumbs to curent page. -->
+					<div class="nav navbar-nav">
+						<ul class="breadcrumb">
+							<li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+							<li><a href="#">Activiteiten</a></li>
+							<li><a href="#">Borrelcie</a></li>
+							<li class="active"><a href="#">Vodkavorrel</a></li>
+						</ul>
+					</div>
+					<!-- Icons for external sites and feeds. -->
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></a></li><!-- Google Calendar -->
 						<li><a href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"></span></a></li> <!-- RSS -->
@@ -51,12 +56,14 @@
 						<li><a href="#"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span></a></li><!-- glyphicon glyphicon-text-size -->
 						<li><a href="#"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></a></li><!-- Language -->
 					</ul>
-				</nav>
-			</div>
+				</div><!-- /.container-fluid -->
+			</nav>
 
 			<header id="header-image" class="hidden-xs hidden-sm">
 				<div id="header-logo">
-					<img src="http://www.olympus.science.ru.nl/media/images/logos/leonardo.png" />
+					<a href="/">
+						<img src="{% static 'img/leologo.png' %}" />
+					</a>
 				</div>
 				<h1>Leonardo da Vinci</h1>
 				<p>Studievereniging Natuurwetenschappen en Science Nijmegen</p>
@@ -75,7 +82,6 @@
 						</button>
 						<!-- <a class="navbar-brand" href="#">Leonardo</a> -->
 					</div>
-
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
