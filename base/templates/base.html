@@ -1,5 +1,6 @@
 
 {% load chat_tags %}
+{% load static from staticfiles %}
 
 
 <!doctype html>
@@ -15,103 +16,13 @@
 
 		<!-- CSS Style files; leave this until endif -->
 		<link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
-		<!-- <link rel="stylesheet" href="https://bootswatch.com/journal/bootstrap.min.css"> -->
+{#		<link rel="stylesheet" href="https://bootswatch.com/journal/bootstrap.min.css">#}
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-		<style>
-			/* CSS style here */
-			/* Birthday or other profile images */
-			.user_icon
-			{
-				width: 64px;
-				height: 64px;
-				overflow: hidden;
-				position: relative;
-				margin-right: 0.5em;
-			}
-
-			.user_icon img
-			{
-				width: auto;
-				height: 64px;
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-
-			/* Shoutbox profile images */
-			.user_icon_chat
-			{
-				width: 40px;
-				height: 40px;
-				overflow: hidden;
-				position: relative;
-				margin-right: 0.5em;
-			}
-
-			.user_icon_chat img
-			{
-				width: auto;
-				height: 40px;
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-
-
-			.chat_message h5 span
-			{
-				float:right;
-			}
-
-			/* Top menu bar with icons */
-			.navbar-narrow .navbar-nav > li > a, .navbar-narrow .navbar-brand
-			{
-				padding-top: 4px;
-				padding-bottom: 0;
-				height: 28px;
-			}
-
-			.navbar-narrow li > a
-			{
-				padding-left: 0.3em;
-				padding-right: 0.3em;
-			}
-
-			.navbar-narrow .navbar-nav
-			{
-				margin-right: 0.3em;
-			}
-
-			.navbar-narrow .navbar
-			{
-				min-height: 28px;
-			}
-
-			/* Image bar at the top */
-			.menu-image-area
-			{
-				letter-spacing: 3px;
-				font-weight: bold;
-				text-shadow: 0 0 2px white;
-			}
-
-			.menu-image-area h1
-			{
-				font-size: 36px;
-				margin: 24px 0 0 150px;
-			}
-
-			.menu-image-area h2
-			{
-				font-size: 24px;
-				margin: 0 0 24px 150px;
-				max-width: 530px;
-			}
-		</style>
+		<link rel="stylesheet" href="{% static 'base.css' %}">
 	</head>
 	<body>
 		<!--
@@ -125,12 +36,12 @@
 
 		<!-- Default menu -->
 		<div class="container"> <!-- if you remove this, the menu will be wider -->
-			<div class="navbar-narrow hidden-xs hidden-sm">
+			<div id="header-menu-top" class="navbar-narrow hidden-xs hidden-sm">
 				<nav class="navbar navbar-default">
 					<ol class="nav navbar-nav navbar-left">
 						<li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
 						<li><a href="#">Library</a></li>
-						<li class="active"><a href="#">Data</a></li>git
+						<li class="active"><a href="#">Data</a></li>
 						<!-- #todo https://css-tricks.com/triangle-breadcrumbs/ -->
 					</ol>
 					<ul class="nav navbar-nav navbar-right">
@@ -143,12 +54,15 @@
 				</nav>
 			</div>
 
-			<header class="menu-image-area hidden-xs hidden-sm">
+			<header id="header-image" class="hidden-xs hidden-sm">
+				<div id="header-logo">
+					<img src="http://www.olympus.science.ru.nl/media/images/logos/leonardo.png" />
+				</div>
 				<h1>Leonardo da Vinci</h1>
-				<h2>Studievereniging Natuurwetenschappen en Science Nijmegen</h2>
+				<p>Studievereniging Natuurwetenschappen en Science Nijmegen</p>
 			</header>
 
-			<nav id="menu-scroll-bar" class="navbar navbar-default">
+			<nav id="header-menu-main" class="navbar navbar-default">
 				<!-- #todo: http://www.w3schools.com/bootstrap/bootstrap_affix.asp -->
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
