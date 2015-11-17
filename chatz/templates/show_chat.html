@@ -1,12 +1,16 @@
 
+{% extends 'base.html' %}
 
-<p>{{ messages }}</p>
+{% load chat_tags %}
 
-{% for msg in messages %}
-    <p>
-    {{ msg.user }}
-    <span title="{{msg.time}}" >{{ msg.time|timesince }}
-    </span>
-    {{ msg.text }}
-    </p>
-{% endfor %}
+
+{% block content %}
+	<h1>Chat about {{ topic }}</h1>
+	{% display_chat topic %}
+{% endblock content %}
+
+{% block chat_widget %}
+	<!-- chat widget hidden on chat page -->
+{% endblock chat_widget %}
+
+

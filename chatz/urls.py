@@ -1,8 +1,11 @@
 
 from django.conf.urls import patterns, url
-from chatz.views import show_chat
+from chatz.views import chat_post, chat_show
 
 
 urlpatterns = patterns('',
-   url(r'^wis1/$', show_chat),
+	url(r'^POST/$', chat_post, name = 'chat_post'),
+	url(r'^wis1/$', chat_show, name = 'chat_show'),
 )
+
+
