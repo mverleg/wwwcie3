@@ -1,0 +1,120 @@
+
+/* CSS style here */
+/* Birthday or other profile images */
+.user_icon
+{
+	width: 64px;
+	height: 64px;
+	overflow: hidden;
+	position: relative;
+	margin-right: 0.5em;
+}
+
+.user_icon img
+{
+	width: auto;
+	height: 64px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* Shoutbox profile images */
+.user_icon_chat
+{
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+	margin-right: 0.5em;
+}
+
+.user_icon_chat img
+{
+	width: auto;
+	height: 40px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.chat_message h5 span
+{
+	float:right;
+}
+
+/* Top menu bar with icons */
+.navbar-narrow .navbar-nav > li > a, .navbar-narrow .navbar-brand
+{
+	padding-top: 4px;
+	padding-bottom: 0;
+	height: 28px;
+}
+
+.navbar-narrow li > a
+{
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+.navbar-narrow .navbar-nav
+{
+	margin-right: 0.3em;
+}
+
+.navbar-narrow .navbar
+{
+	min-height: 28px;
+}
+
+.container div
+{
+	margin: 0;
+	padding: 0;
+}
+
+#header-menu-top nav
+{
+	margin-bottom: 0;
+}
+
+/* Image bar at the top */
+#header-image
+{
+	height: 150px;
+	letter-spacing: 3px;
+	font-weight: bold;
+	text-shadow: 0 0 2px white;
+}
+
+#header-image h1
+{
+	padding-top: .5em;
+	font-size: 36px;
+	margin: 0 0 0 150px;
+}
+
+#header-image p
+{
+	font-size: 24px;
+	margin: 0 0 24px 150px;
+	max-width: 600px;
+}
+
+#header-logo
+{
+	float: left;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	margin-right: 1em;
+}
+
+#header-logo img
+{
+	margin: 15px;
+	max-width: 120px;
+	max-height: 120px;
+}
+
+

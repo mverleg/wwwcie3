@@ -17,3 +17,5 @@ urlpatterns = patterns('',
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'^chat/', include(chatz.urls)),
 )
+
+
